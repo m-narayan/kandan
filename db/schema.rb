@@ -11,13 +11,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130315214129) do
+ActiveRecord::Schema.define(:version => 20130603102733) do
 
   create_table "activities", :force => true do |t|
     t.text     "content"
     t.integer  "channel_id"
     t.integer  "user_id"
     t.string   "action"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "api_keys", :force => true do |t|
+    t.string   "api_key"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -42,6 +48,14 @@ ActiveRecord::Schema.define(:version => 20130315214129) do
   end
 
   add_index "channels", ["user_id"], :name => "index_channels_on_user_id"
+
+  create_table "chats", :force => true do |t|
+    t.integer  "channel_id"
+    t.integer  "user_id"
+    t.boolean  "status"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "sessions", :force => true do |t|
     t.string   "session_id", :null => false

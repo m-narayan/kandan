@@ -27,12 +27,12 @@ window.Kandan =
       ,"Pastie"
       ,"Mentions"
       ,"Notifications"
-      ,"MusicPlayer"
+#      ,"MusicPlayer"
       ,"YouTubeEmbed"
       ,"VimeoEmbed"
       ,"ImageEmbed"
       ,"LinkEmbed"
-      ,"Attachments"
+#      ,"Attachments"
       ,"MeAnnounce"
       ,"Emoticons"
       ,"Emojis"
@@ -63,8 +63,8 @@ window.Kandan =
 
   initBroadcasterAndSubscribe: ()->
     Kandan.broadcaster = eval "new Kandan.Broadcasters.#{@options().broadcaster.name}Broadcaster()"
-    Kandan.broadcaster.subscribe "/channels/*"
-
+    current_channel_id = $.data(document, 'current_channel_id')
+    Kandan.broadcaster.subscribe "/channels/#{current_channel_id}"
   initTabs: ()->
     $('#kandan').tabs({
       select: (event, ui)->

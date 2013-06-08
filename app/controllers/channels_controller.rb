@@ -9,16 +9,18 @@ class ChannelsController < ApplicationController
     nested_channel_data = []
 
     # TODO this can be shortened
-    @channels.each do |channel|
-      activities = []
-      more_activities = (channel.activities.count > Kandan::Config.options[:per_page])
-      channel.activities.order('id DESC').includes(:user).page.each do |activity|
-        activities.push activity.attributes.merge({
-          :user => activity.user_or_deleted_user.as_json(:only => [:id, :email, :first_name, :last_name, :gravatar_hash, :active, :locale, :username])
-        })
-      end
-
-      nested_channel_data.push channel.attributes.merge({:activities => activities.reverse, :more_activities => more_activities})
+     @channels.each do |channel|
+      if channel.id == session[:channel_id]
+        activities = []
+        more_activities = (channel.activities.count > Kandan::Config.options[:per_page])
+        channel.activities.order('id DESC').includes(:user).page.each do |activity|
+          activities.push activity.attributes.merge({
+            :user => activity.user_or_deleted_user.as_json(:only => [:id, :email, :first_name, :last_name, :gravatar_hash, :active, :locale, :username])
+          })
+         end
+         nested_channel_data.push channel.attributes.merge({:activities => activities.reverse, :more_activities => more_activities})
+       end     
+        
     end
     
     respond_to do |format|

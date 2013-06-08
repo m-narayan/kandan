@@ -1,0 +1,19 @@
+language: ruby
+services:
+  - mongodb
+before_install:
+  - gem install bundler
+rvm:
+  - 1.9.3
+  - ruby-head
+  - jruby-19mode
+  - rbx-19mode
+matrix:
+  allow_failures:
+    - rvm: jruby-19mode
+notifications:
+  email:
+    recipients:
+      - lest@brainspec.com
+      - nashby@brainspec.com
+      - dreamfall@brainspec.com

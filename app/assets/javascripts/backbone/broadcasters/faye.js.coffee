@@ -32,7 +32,8 @@ class Kandan.Broadcasters.FayeBroadcaster
     Kandan.Data.Attachments.runCallbacks("change", data)
 
   processEventsForUser: (eventName, data)->
-    if eventName.match(/connect/)
+    current_channel_id = $.data(document, 'current_channel_id')
+    if eventName.match(/connect/)  && (data.channel_id == current_channel_id)
       $(document).data('active-users', data.extra.active_users)
       Kandan.Data.ActiveUsers.runCallbacks("change", data)
 

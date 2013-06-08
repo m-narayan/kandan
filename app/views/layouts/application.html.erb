@@ -14,6 +14,7 @@
   <%- if user_signed_in? %>
     <%= javascript_tag do %>
       $.data(document, "current-user", <%= current_user_data.to_json.html_safe %>);
+       $.data(document, "current_channel_id", <%= session[:channel_id].to_json.html_safe %>);
     <% end %>
   <%- end %>
 </head>
@@ -31,7 +32,7 @@
             <span><%= current_user.full_name_or_username %></span>
           </div>
         </a>
-        <%= yield :header_content %>
+       
       </div>
       <div class="user_menu">
         <%= link_to 'Admin console', admin_root_path, :target => "_blank" if current_user.is_admin? %>
@@ -46,7 +47,6 @@
     <div id="app_body">
 
     <%= yield %>
-
     </div>
   </div>
 </body>

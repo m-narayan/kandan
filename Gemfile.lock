@@ -72,7 +72,6 @@ GEM
       execjs
     coffee-script-source (1.6.2)
     colorize (0.5.8)
-    columnize (0.3.6)
     cookiejar (0.3.0)
     coveralls (0.6.4)
       colorize
@@ -83,12 +82,6 @@ GEM
     daemons (1.1.9)
     database_cleaner (0.9.1)
     debug_inspector (0.0.2)
-    debugger (1.5.0)
-      columnize (>= 0.3.1)
-      debugger-linecache (~> 1.2.0)
-      debugger-ruby_core_source (~> 1.2.0)
-    debugger-linecache (1.2.0)
-    debugger-ruby_core_source (1.2.0)
     devise (2.2.3)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.1)
@@ -301,7 +294,6 @@ DEPENDENCIES
   coffee-rails
   coveralls
   database_cleaner
-  debugger
   devise
   eco
   enumerize

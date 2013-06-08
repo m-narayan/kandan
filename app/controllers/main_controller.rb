@@ -3,7 +3,7 @@ class MainController < ApplicationController
   
   def index
     # TODO this isn't being used right now. use this for faster app
-    @channels = Channel.includes(:activities => :user).all
+    @channels = Channel.includes(:activities => :user).find(session[:channel_id])
   end
 
   def search
