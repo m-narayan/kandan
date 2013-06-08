@@ -49,7 +49,7 @@ group :development do
   gem 'awesome_print'
   gem 'better_errors'
   gem 'binding_of_caller'
- # gem 'debugger'
+  #gem 'debugger'
 end
 
 group :test do
@@ -71,4 +71,5 @@ group :development, :test do
   gem 'guard-rspec'
   gem 'database_cleaner'
   gem 'jasmine', '~> 1.3.1'
+  gem "coffee-script-redux-debugger", :git => "git://github.com/JetBrains/coffee-script-redux-debugger.git"
 end
