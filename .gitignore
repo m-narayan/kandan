@@ -31,5 +31,4 @@ DS_Store
 /tmp
 
 public/system/*
-/.idea/*
-.idea/*
+/.idea
