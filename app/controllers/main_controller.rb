@@ -2,8 +2,12 @@ class MainController < ApplicationController
   before_filter :authenticate_user!
   
   def index
-    # TODO this isn't being used right now. use this for faster app
-    @channels = Channel.includes(:activities => :user).find(session[:channel_id])
+    if session[:channel_id]      
+      @channels = Channel.includes(:activities => :user).find(session[:channel_id])
+    else
+      # TODO this isn't being used right now. use this for faster app    
+      @channels = Channel.includes(:activities => :user).all
+    end
   end
 
   def search

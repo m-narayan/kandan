@@ -1,0 +1,26 @@
+user is : 10
+{"o8g43rso6q228aoleev2rzbw0mr6nqq"=>10, "ia9nns7nczx4zm590p1572y9zqydmos"=>12}
+user is : 
+{"ia9nns7nczx4zm590p1572y9zqydmos"=>12}
+
+
+
+user is : 12
+{"ia9nns7nczx4zm590p1572y9zqydmos"=>12}
+user is : 
+{}
+user is : 15
+{"kviktrs32rocd5t1t2p4vlztall94gh"=>12, "2evgl2atjhltg3kdaqbxqh021alh280"=>15}
+user is : 
+{"kviktrs32rocd5t1t2p4vlztall94gh"=>12}
+
+
+
+user is : 12
+{"kviktrs32rocd5t1t2p4vlztall94gh"=>12, "n24crpixyu5r81885t8edbnvtu54o62"=>15, "ca6zf7d703rfhsgyylpe2dgu93pcaa2"=>11}
+user is : 
+{"n24crpixyu5r81885t8edbnvtu54o62"=>15, "ca6zf7d703rfhsgyylpe2dgu93pcaa2"=>11}
+user is : 11
+{"n24crpixyu5r81885t8edbnvtu54o62"=>15, "ca6zf7d703rfhsgyylpe2dgu93pcaa2"=>11}
+user is : 
+{"n24crpixyu5r81885t8edbnvtu54o62"=>15}
