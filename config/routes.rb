@@ -32,5 +32,6 @@ Kandan::Application.routes.draw do
   get "/suspended", :to => "pages#suspended"
   get "/about", :to =>"pages#about"
 
-  get "/connect" => "chats#connect"
+  # get "/connect" => "chats#connect"
+  get "/connect" => "apis#connect"
 end

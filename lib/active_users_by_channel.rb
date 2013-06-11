@@ -5,7 +5,6 @@
     @@client_user = {}
 
     class << self
-
       def add(subscription, client_id, user)
         if subscription.include? "channels"
           arr =subscription.split("/")
