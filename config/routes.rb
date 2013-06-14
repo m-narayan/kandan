@@ -34,4 +34,9 @@ Kandan::Application.routes.draw do
 
   # get "/connect" => "chats#connect"
   get "/connect" => "apis#connect"
+
+  devise_scope :user do
+    match '/sign_out', :to => 'sessions#destroy'
+  end
+  
 end

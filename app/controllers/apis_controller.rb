@@ -19,7 +19,7 @@ def connect
       email=params[:email]
       channel_name=params[:channel_name]
       auth_token=params[:auth_token]
-      user=User.find_by_email(email)
+      user=User.find_by_username(username)
       channel=Channel.find(:first, :conditions => [ "lower(name) = ?", channel_name.downcase ])
       if user == nil
         user=User.new(username: username,email: email,password: "arrivu", password_confirmation: "arrivu")

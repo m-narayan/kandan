@@ -72,6 +72,6 @@ class User < ActiveRecord::Base
 
   def suspend!
     self.suspend && self.save!
-  end
+  end 
 
 end
